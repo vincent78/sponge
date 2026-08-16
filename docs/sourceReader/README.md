@@ -1,6 +1,6 @@
 # Sponge 源码阅读与重实现文档库
 
-> 状态：进行中（第一至三层已完成，第四层按模块补齐中）
+> 状态：已完成（待复核生成稿）
 > 生成日期：2026-08-16
 > 基准提交：`23807238c62e0f3b3e2d9a341bbef50547d3f5ec`
 > 工作区：dirty（存在与本任务无关的本地改动：`go.mod` / `go.sum` / sqlite 测试库等；本目录仅新增文档）
@@ -55,25 +55,25 @@ Sponge 不是运行时依赖注入大框架。它同时包含两套代码：
 
 | 顺序 | 文档 | 所属层 | 读完能回答 | 状态 |
 |---|---|---|---|---|
-| 0 | [README.md](README.md)（本文） | 地图 | 有哪些文档、先读哪篇、源码覆盖到哪 | 进行中 |
+| 0 | [README.md](README.md)（本文） | 地图 | 有哪些文档、先读哪篇、源码覆盖到哪 | 已完成 |
 | 1 | [01-简单框架-系统骨架.md](01-简单框架-系统骨架.md) | 第一层 | 项目是干什么的、运行时有几块、请求大概怎么走 | 已完成 |
 | 2 | [02-简单例子-全路径走读.md](02-简单例子-全路径走读.md) | 第二层 | 一次 `sponge web http` 如何变成目录，生成服务如何响应 `GetByID` | 已完成 |
 | 3 | [03-详细逐步说明-主链路拆解.md](03-详细逐步说明-主链路拆解.md) | 第三层 | 主链每一跳的参数、返回值、错误传播、失败与边界 | 已完成 |
-| 4 | [04-CLI入口命令树与生命周期.md](04-CLI入口命令树与生命周期.md) | 第四层 | 全部 Cobra 命令、init/upgrade/plugins、版本与模板目录 | 待写 |
-| 5 | [05-代码生成器与模板写入.md](05-代码生成器与模板写入.md) | 第四层 | 所有 `generate.*Command`、字段替换、文件变体、安全写入 | 待写 |
-| 6 | [06-SQL到代码片段引擎.md](06-SQL到代码片段引擎.md) | 第四层 | 四种数据库元数据、ParseSQL、类型映射、CRUD 片段 | 待写 |
-| 7 | [07-Protoc插件与增量合并.md](07-Protoc插件与增量合并.md) | 第四层 | 三个 protoc 插件、AST 合并、patch/merge | 待写 |
-| 8 | [08-UI-Assistant-Patch与性能测试.md](08-UI-Assistant-Patch与性能测试.md) | 第四层 | `sponge run` UI、AI assistant、template、perftest | 待写 |
-| 9 | [09-生成项目启动与HTTP请求链.md](09-生成项目启动与HTTP请求链.md) | 第四层 | 生成项目 main/initial/server/router/handler | 待写 |
-| 10 | [10-gRPC服务网关与RPC客户端.md](10-gRPC服务网关与RPC客户端.md) | 第四层 | gRPC server、interceptor、gateway、rpcclient | 待写 |
-| 11 | [11-数据层Model-DAO-Cache.md](11-数据层Model-DAO-Cache.md) | 第四层 | model/dao/cache/database 及事务、缓存击穿 | 待写 |
-| 12 | [12-pkg应用生命周期与Gin.md](12-pkg应用生命周期与Gin.md) | 第四层 | `pkg/app`、`pkg/gin`、`pkg/httpsrv` | 待写 |
-| 13 | [13-pkg-gRPC与服务注册发现.md](13-pkg-gRPC与服务注册发现.md) | 第四层 | `pkg/grpc`、`pkg/servicerd` | 待写 |
-| 14 | [14-pkg数据库缓存与查询.md](14-pkg数据库缓存与查询.md) | 第四层 | `pkg/sgorm`、`pkg/mgo`、`pkg/cache`、`pkg/goredis` | 待写 |
-| 15 | [15-pkg可观测性限流熔断与其余包.md](15-pkg可观测性限流熔断与其余包.md) | 第四层 | logger/tracer/shield 及其余一级包全量索引 | 待写 |
-| 16 | [16-配置错误码测试构建与部署.md](16-配置错误码测试构建与部署.md) | 第四层 | conf/errcode、Makefile、CI、K8s、自动测试 | 待写 |
-| 17 | [17-从零重新实现指南.md](17-从零重新实现指南.md) | 第四层 | 可运行里程碑、每阶段验收条件 | 待写 |
-| 18 | [18-源码索引与覆盖矩阵.md](18-源码索引与覆盖矩阵.md) | 第四层 | 文件→文档映射、未覆盖项、待确认项 | 待写 |
+| 4 | [04-CLI入口命令树与生命周期.md](04-CLI入口命令树与生命周期.md) | 第四层 | 全部 Cobra 命令、init/upgrade/plugins、版本与模板目录 | 已完成 |
+| 5 | [05-代码生成器与模板写入.md](05-代码生成器与模板写入.md) | 第四层 | 所有 `generate.*Command`、字段替换、文件变体、安全写入 | 已完成 |
+| 6 | [06-SQL到代码片段引擎.md](06-SQL到代码片段引擎.md) | 第四层 | 四种数据库元数据、ParseSQL、类型映射、CRUD 片段 | 已完成 |
+| 7 | [07-Protoc插件与增量合并.md](07-Protoc插件与增量合并.md) | 第四层 | 三个 protoc 插件、AST 合并、patch/merge | 已完成 |
+| 8 | [08-UI-Assistant-Patch与性能测试.md](08-UI-Assistant-Patch与性能测试.md) | 第四层 | `sponge run` UI、AI assistant、template、perftest | 已完成 |
+| 9 | [09-生成项目启动与HTTP请求链.md](09-生成项目启动与HTTP请求链.md) | 第四层 | 生成项目 main/initial/server/router/handler | 已完成 |
+| 10 | [10-gRPC服务网关与RPC客户端.md](10-gRPC服务网关与RPC客户端.md) | 第四层 | gRPC server、interceptor、gateway、rpcclient | 已完成 |
+| 11 | [11-数据层Model-DAO-Cache.md](11-数据层Model-DAO-Cache.md) | 第四层 | model/dao/cache/database 及事务、缓存击穿 | 已完成 |
+| 12 | [12-pkg应用生命周期与Gin.md](12-pkg应用生命周期与Gin.md) | 第四层 | `pkg/app`、`pkg/gin`、`pkg/httpsrv` | 已完成 |
+| 13 | [13-pkg-gRPC与服务注册发现.md](13-pkg-gRPC与服务注册发现.md) | 第四层 | `pkg/grpc`、`pkg/servicerd` | 已完成 |
+| 14 | [14-pkg数据库缓存与查询.md](14-pkg数据库缓存与查询.md) | 第四层 | `pkg/sgorm`、`pkg/mgo`、`pkg/cache`、`pkg/goredis` | 已完成 |
+| 15 | [15-pkg可观测性限流熔断与其余包.md](15-pkg可观测性限流熔断与其余包.md) | 第四层 | logger/tracer/shield 及其余一级包全量索引 | 已完成 |
+| 16 | [16-配置错误码测试构建与部署.md](16-配置错误码测试构建与部署.md) | 第四层 | conf/errcode、Makefile、CI、K8s、自动测试 | 已完成 |
+| 17 | [17-从零重新实现指南.md](17-从零重新实现指南.md) | 第四层 | 可运行里程碑、每阶段验收条件 | 已完成 |
+| 18 | [18-源码索引与覆盖矩阵.md](18-源码索引与覆盖矩阵.md) | 第四层 | 文件→文档映射、未覆盖项、待确认项 | 已完成 |
 
 ## 目录树
 
@@ -203,33 +203,33 @@ docs/sourceReader/
 - 目录/文件 → 文档锚点。
 - 测试覆盖缺口、推断项、待确认项。
 
-## 源码覆盖矩阵（规划）
+## 源码覆盖矩阵
 
-口径：仓库内约 607 个自有 `.go` 文件（不含 `third_party/` 与 `docs/`）。“覆盖”指有对应文档追踪到真实符号与调用关系，不是“提到目录名”。
+口径：仓库内约 607 个自有 `.go` 文件（不含 `third_party/` 与 `docs/`）。“覆盖”指有对应文档追踪到真实符号与调用关系，不是“提到目录名”。细表见 [18-源码索引与覆盖矩阵.md](18-源码索引与覆盖矩阵.md)。
 
 | 源码范围 | 计划文档 | 覆盖状态 |
 |---|---|---|
-| `cmd/sponge/main.go`、`commands/root.go`、`init.go`、`upgrade.go`、`plugins.go` | 01、04 | 第一层已点到入口；第四层未展开 |
-| `cmd/sponge/commands/web.go`、`generate/http.go`、`generate/common.go`、`generate/init.go` | 01、02、05 | 第二层已走通 http 主路径 |
-| `cmd/sponge/commands/generate/*.go` 其余生成器 | 05 | 待写 |
-| `cmd/sponge/commands/micro.go` 及 grpc/pb 生成器 | 05、10 | 待写 |
-| `cmd/sponge/commands/run.go`、`cmd/sponge/server/` | 02、08 | 第二层已说明 UI 调用 CLI |
-| `cmd/sponge/commands/assistant*`、`template*`、`merge*`、`patch*`、`perftest*`、`graph.go` | 07、08 | 待写 |
-| `cmd/protoc-gen-go-gin/`、`cmd/protoc-gen-go-rpc-tmpl/`、`cmd/protoc-gen-json-field/` | 07 | 待写 |
-| `cmd/perftest/` | 08 | 待写 |
-| `cmd/serverNameExample_httpExample/`、`internal/handler`、`internal/routers`、`internal/server/http.go` | 02、09 | 第二层已走通 GetByID 成功路径 |
-| `cmd/serverNameExample_grpc*`、`internal/service`、`internal/rpcclient`、`internal/server/grpc.go` | 10 | 待写 |
-| `internal/model`、`internal/dao`、`internal/cache`、`internal/database` | 02、11 | 第二层已点到 GetByID 读写 |
-| `internal/config`、`internal/ecode`、`internal/types`、`api/` | 09、16 | 待写 |
-| `pkg/sql2code/` | 02、06 | 第二层已走通 Generate/ParseSQL |
-| `pkg/replacer/` | 02、05 | 第二层已走通 SaveFiles |
-| `pkg/app/`、`pkg/gin/`、`pkg/httpsrv/` | 09、12 | 待写 |
-| `pkg/grpc/`、`pkg/servicerd/` | 10、13 | 待写 |
-| `pkg/sgorm/`、`pkg/mgo/`、`pkg/cache/`、`pkg/goredis/` | 11、14 | 待写 |
-| `pkg/logger/`、`pkg/tracer/`、`pkg/shield/`、`pkg/stat/`、`pkg/prof/` | 15 | 待写 |
-| 其余 `pkg/*` 一级包 | 15 | 待写 |
-| `configs/`、`deployments/`、`scripts/`、`Makefile*`、`.github/` | 16 | 待写 |
-| `test/auto-test/`、`test/server/`、各 `*_test.go` | 02、16 | 第二层已引用 `1_web_http.sh` 与 sql2code/handler 测试 |
+| `cmd/sponge/main.go`、`commands/root.go`、`init.go`、`upgrade.go`、`plugins.go` | 01、04 | 已覆盖 |
+| `cmd/sponge/commands/web.go`、`generate/http.go`、`generate/common.go`、`generate/init.go` | 01、02、05 | 已覆盖 |
+| `cmd/sponge/commands/generate/*.go` 其余生成器 | 05 | 已覆盖 |
+| `cmd/sponge/commands/micro.go` 及 grpc/pb 生成器 | 05、10 | 已覆盖 |
+| `cmd/sponge/commands/run.go`、`cmd/sponge/server/` | 02、08 | 已覆盖 |
+| `cmd/sponge/commands/assistant*`、`template*`、`merge*`、`patch*`、`perftest*`、`graph.go` | 07、08 | 已覆盖 |
+| `cmd/protoc-gen-go-gin/`、`cmd/protoc-gen-go-rpc-tmpl/`、`cmd/protoc-gen-json-field/` | 07 | 已覆盖 |
+| `cmd/perftest/` | 08 | 已覆盖 |
+| `cmd/serverNameExample_httpExample/`、`internal/handler`、`internal/routers`、`internal/server/http.go` | 02、09 | 已覆盖 |
+| `cmd/serverNameExample_grpc*`、`internal/service`、`internal/rpcclient`、`internal/server/grpc.go` | 10 | 已覆盖 |
+| `internal/model`、`internal/dao`、`internal/cache`、`internal/database` | 02、11 | 已覆盖 |
+| `internal/config`、`internal/ecode`、`internal/types`、`api/` | 09、16 | 已覆盖 |
+| `pkg/sql2code/` | 02、06 | 已覆盖 |
+| `pkg/replacer/` | 02、05 | 已覆盖 |
+| `pkg/app/`、`pkg/gin/`、`pkg/httpsrv/` | 09、12 | 已覆盖 |
+| `pkg/grpc/`、`pkg/servicerd/` | 10、13 | 已覆盖 |
+| `pkg/sgorm/`、`pkg/mgo/`、`pkg/cache/`、`pkg/goredis/` | 11、14 | 已覆盖 |
+| `pkg/logger/`、`pkg/tracer/`、`pkg/shield/`、`pkg/stat/`、`pkg/prof/` | 15 | 已覆盖 |
+| 其余 `pkg/*` 一级包 | 15 | 已覆盖 |
+| `configs/`、`deployments/`、`scripts/`、`Makefile*`、`.github/` | 16 | 已覆盖 |
+| `test/auto-test/`、`test/server/`、各 `*_test.go` | 02、16 | 已覆盖（阅读测试；未执行套件） |
 | `docs/`（本目录以外的已有笔记）、`examples/`、`assets/` | 18 | 仅作交叉引用，不作为行为证据源 |
 
 ## 术语
@@ -258,4 +258,6 @@ docs/sourceReader/
 2. 已完成：第一层系统骨架。
 3. 已完成：第二层 `sponge web http` 全路径走读。
 4. 已完成：第三层主链路逐步拆解。
-5. 进行中：第四层按模块补齐。
+5. 已完成：第四层 04–18 按模块补齐（CLI、生成器、sql2code、protoc/merge、UI/assistant/perftest、HTTP/gRPC 运行时、数据层、pkg、配置测试部署、重实现路线、覆盖矩阵）。
+6. 未执行：单元测试套件与 `test/auto-test` 脚本；结论来自静态阅读。
+7. 待确认：生产参数、以及当前基准提交下自动测试是否仍通过。
